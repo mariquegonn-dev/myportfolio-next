@@ -1,4 +1,5 @@
 import { HeaderNav } from "@/types";
+import Image from "next/image";
 import Link from "next/link";
 
 type HeaderProps = {
@@ -7,29 +8,43 @@ type HeaderProps = {
 
 export const Header = ({ items }: HeaderProps) => {
   return (
-    <header className="text-whitePrimary container mx-auto bg-red-600 font-normal">
-      <div className="flex justify-between p-4 ">
+    <header className=" container mx-auto font-normal text-whitePrimary">
+      <div className="flex flex-wrap justify-between p-4">
         <div className="flex items-center gap-2.5">
-          <p>Logo</p>
+          <Image
+            className="max-w-full rounded-full object-fill"
+            src="/assets/images/perfil.jpg"
+            width={48}
+            height={48}
+            alt="imagem de perfil"
+          />
           <Link href="/">
             <h2>Henrique Goncalves</h2>
-            <p className="text-graySec text-sm">Desenvolvedor Frontend</p>
+            <p className="text-sm text-graySec">Desenvolvedor Frontend</p>
           </Link>
         </div>
 
         <nav>
-          <ul className="flex items-center gap-10">
+          <ul className="flex flex-wrap items-center gap-10">
             {items.mainNav.map((item) => (
               <li className="py-4" key={item.title}>
                 <Link
-                  className="hover:text-purplePrimary transition-all ease-in-out"
+                  className="transition-all ease-in-out hover:text-purplePrimary"
                   href={item.href}
                 >
                   {item.title}
                 </Link>
               </li>
             ))}
-            <li>Img</li>
+            <li>
+              <Image
+                className="cursor-pointer"
+                src="/assets/svg/scheme.svg"
+                width={24}
+                height={24}
+                alt="scheme button"
+              />
+            </li>
           </ul>
         </nav>
       </div>
