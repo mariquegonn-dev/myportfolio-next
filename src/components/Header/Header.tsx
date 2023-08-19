@@ -1,51 +1,17 @@
-import { HeaderNav } from "@/types";
-import Image from "next/image";
-import Link from "next/link";
+import { MainLogo } from "../MainLogo";
 
 type HeaderProps = {
-  items: HeaderNav;
+  children: React.ReactNode;
 };
 
-export const Header = ({ items }: HeaderProps) => {
+export const Header = ({ children }: HeaderProps) => {
   return (
-    <header className=" container mx-auto font-normal text-whitePrimary">
-      <div className="flex flex-wrap justify-between p-4">
-        <div className="flex items-center gap-2.5">
-          <Image
-            className="max-w-full rounded-full object-fill"
-            src="/assets/images/perfil.jpg"
-            width={48}
-            height={48}
-            alt="imagem de perfil"
-          />
-          <Link href="/">
-            <h2>Henrique Goncalves</h2>
-            <p className="text-sm text-graySec">Desenvolvedor Frontend</p>
-          </Link>
-        </div>
+    <header className="container mx-auto font-normal text-whitePrimary">
+      <div className="flex flex-wrap items-center justify-between p-4">
+        <MainLogo />
 
-        <nav>
-          <ul className="flex flex-wrap items-center gap-10">
-            {items.mainNav.map((item) => (
-              <li className="py-4" key={item.title}>
-                <Link
-                  className="transition-all ease-in-out hover:text-purplePrimary"
-                  href={item.href}
-                >
-                  {item.title}
-                </Link>
-              </li>
-            ))}
-            <li>
-              <Image
-                className="cursor-pointer"
-                src="/assets/svg/scheme.svg"
-                width={24}
-                height={24}
-                alt="scheme button"
-              />
-            </li>
-          </ul>
+        <nav aria-label="menu de links para navegação" role="navigation">
+          {children}
         </nav>
       </div>
     </header>

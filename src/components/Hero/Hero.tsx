@@ -10,7 +10,7 @@ export const Hero = () => {
           e {<span className="text-purplePrimary">Typescript</span>}.
         </h1>
       </section>
-      <div className="mx-auto max-w-max animate-bounce cursor-pointer p-4">
+      <div className="z-10 mx-auto max-w-max animate-bounce cursor-pointer p-4">
         <Image
           src="/assets/svg/down.svg"
           width={48}
