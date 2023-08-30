@@ -7,12 +7,12 @@ export const headerData: HeaderNav = {
       href: "/",
     },
     {
-      title: "Projetos",
-      href: "/projetos",
+      title: "Github",
+      href: "https://github.com/mariquegonn-dev",
     },
     {
-      title: "Contato",
-      href: "/contato",
+      title: "Linkedin",
+      href: "https://www.linkedin.com/in/mariquegonn-dev/",
     },
   ],
 };
