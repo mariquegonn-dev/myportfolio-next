@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Barlow } from "next/font/google";
 import { headerData } from "@/config";
 import { MainNav } from "@/components/Header/components/MainNav";
+import { Container } from "@/components/Container";
 
 const barlow = Barlow({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -20,9 +21,11 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={barlow.className}>
-        <Header>
-          <MainNav items={headerData} />
-        </Header>
+        <Container>
+          <Header>
+            <MainNav items={headerData} />
+          </Header>
+        </Container>
         {children}
       </body>
     </html>
