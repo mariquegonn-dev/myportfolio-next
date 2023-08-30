@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <div className="absolute top-[2000px]">
+      <div className="absolute top-[2000px] hidden lg:block">
         <Image
           width={50}
           height={460}
