@@ -9,6 +9,7 @@ export const LinkMenu = ({ href, title }: LinkProps) => {
   return (
     <>
       <Link
+        target="_blank"
         className="inline-block py-4 transition-all ease-in-out hover:text-purplePrimary"
         href={href}
       >

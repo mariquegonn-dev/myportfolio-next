@@ -30,7 +30,7 @@ export const MainNav = ({ items }: menuNavProps) => {
       </div>
 
       {isOpenMenu && (
-        <div className="absolute left-0 top-24 z-[1000] grid min-h-[88%] w-full items-start bg-black">
+        <div className="absolute left-0 top-24 z-[1000] grid min-h-screen w-full items-start bg-black">
           <ul className="grid justify-center justify-items-center gap-4 px-4 text-xl">
             {items.mainNav.map((item) => (
               <li key={item.href}>
