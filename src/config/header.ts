@@ -5,6 +5,7 @@ export const headerData: HeaderNav = {
     {
       title: "Home",
       href: "/",
+      target: true,
     },
     {
       title: "Github",

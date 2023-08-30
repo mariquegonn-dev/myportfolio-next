@@ -17,7 +17,11 @@ export const MainNav = ({ items }: menuNavProps) => {
       <ul className="hidden items-center gap-10 lg:flex">
         {items.mainNav.map((item) => (
           <li key={item.title}>
-            <LinkMenu href={item.href} title={item.title} />
+            <LinkMenu
+              href={item.href}
+              title={item.title}
+              target={item.target}
+            />
           </li>
         ))}
       </ul>
