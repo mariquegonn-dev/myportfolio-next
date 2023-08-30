@@ -14,8 +14,11 @@ export const metadata: Metadata = {
   description:
     "Olá! Sou um apaixonado desenvolvedor frontend com uma sólida base em tecnologias como o React, Typescript, Next.js, Node.js e diversas bibliotecas, onde pude desenvolver sites responsivos, bonitos e objetivos. Estou ansioso por uma oportunidade que me permita demonstrar minhas habilidades; Posso garantir que entregarei o meu melhor, com muita dedicação e empenho!",
   icons: {
-    icon: "https://codefrontend.com/content/images/size/w600/2022/09/code-frontend-logo.png",
+    icon: ["/favicon.ico?v=4"],
+    apple: ["/apple-touch-icon.png?v=4"],
+    shortcut: ["/apple-touch-icon.png"],
   },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
